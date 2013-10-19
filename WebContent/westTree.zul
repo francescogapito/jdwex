@@ -1,0 +1,25 @@
+<zk>
+	<tree id="serverTree" hflex="1" model="@load(vm.serverTreeModel)" selectedItem="@bind(vm.selectedTreeNode)">
+		<treecols>
+			<treecol hflex="1" />
+		</treecols>
+		<template name="model">
+			<treeitem context="${each.contextMenu}">
+				<treerow>
+					<treecell label="${each.description}" />
+				</treerow>
+			</treeitem>
+		</template>
+	</tree>
+	<menupopup id="ctxMenuFull">
+		<menuitem label="Query" onClick="@command('query')"/>
+		<menuseparator />
+		<menuitem label="Refresh" />
+		<menuitem label="Properties" />
+	</menupopup>
+	<menupopup id="ctxMenu">
+		<menuitem label="Refresh" />
+		<menuitem label="Properties" />
+	</menupopup>
+
+</zk>

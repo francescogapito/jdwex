@@ -1,0 +1,32 @@
+<window id="queryPanel" height="100%" border="none" hflex="1" vflex="1" apply="${mainTabCtrl}">
+	<borderlayout>
+		<center vflex="1" hflex="1">
+			<vlayout vflex="1" hflex="1">
+				<toolbar orient="horizontal">
+					<toolbarbutton label="Execute" forward="onExecute"></toolbarbutton>
+				</toolbar>
+				<textbox id="tbQuery" vflex="1" hflex="1" multiline="true" value="${arg.query}"></textbox>
+			</vlayout>
+		</center>
+		<south title=" " vflex="1" hflex="1" collapsible="true" splittable="true">
+			<tabbox>
+				<tabs>
+					<tab label="Results"></tab>
+					<tab label="Messages"></tab>
+				</tabs>
+				<tabpanels>
+					<tabpanel>
+						<grid model="${$composer.results}" rowRenderer="org.gapito.jdwex.ui.GridResultRenderer">
+							<columns>
+								<column forEach="${$composer.columns}" label="${each}"></column>
+							</columns>
+						</grid>
+					</tabpanel>
+					<tabpanel>
+						<textbox id="tbMessages" vflex="1" hflex="1" multiline="true" readonly="true"></textbox>
+					</tabpanel>
+				</tabpanels>
+			</tabbox>
+		</south>
+	</borderlayout>
+</window>

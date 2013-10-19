@@ -1,0 +1,10 @@
+<?page title="Java Data Web Explorer"?>
+<zk>
+	<borderlayout id="mainPanel" apply="org.zkoss.bind.BindComposer" viewModel='@id("vm") @init("org.gapito.jdwex.vm.JdwexVM", mode="mock")'>
+		<west border="none" collapsible="true" size='100%'>
+			<include src="westTree.zul" vflex="1" hflex="1" />
+		</west>
+		<center border="0">
+		</center>
+	</borderlayout>
+</zk>

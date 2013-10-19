@@ -1,0 +1,10 @@
+<?page title="" contentType="text/html;charset=UTF-8"?>
+<?variable-resolver class="org.zkoss.zkplus.spring.DelegatingVariableResolver"?>
+<zk>
+	<window title="" border="normal" apply="${mainTabCtrl}">
+		<tabbox id="mainTabbox" vflex="1" hflex="1">
+			<tabs id="mainTabs"></tabs>
+			<tabpanels id="mainTabpanels"></tabpanels>
+		</tabbox>
+	</window>
+</zk>
